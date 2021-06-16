@@ -1,16 +1,29 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput } from 'react-native';
+import React, { useState, useContext } from 'react';
+import { Platform } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { AuthContext } from '../../src/contexts/auth';
 
 import { Background, Container, AreaInput, Input, Logo, SubmitButton, SubmitText, Link, LinkText } from './styles';
 
 export default function SignIn() {
 
+  const navigation = useNavigation();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { signIn } = useContext(AuthContext);
+  
+
+  function handleLogin(){
+    signIn(email, password);
+  }
 
   return (
     <Background>
-      <Container>
+      <Container
+      behavior = {Platform.OS === 'ios' ? 'padding' : ''}
+      enabled
+      >
         <Logo source={require('../../assets/ImigrantesNovo.png')} />
 
         <AreaInput>
@@ -33,11 +46,11 @@ export default function SignIn() {
           />
         </AreaInput>
 
-        <SubmitButton>
+        <SubmitButton onPress={handleLogin}>
           <SubmitText>Acessar</SubmitText>
         </SubmitButton>
 
-        <Link>
+        <Link onPress={() =>navigation.navigate('SignUp')}>
           <LinkText>Criar uma conta!</LinkText>
         </Link>
 
