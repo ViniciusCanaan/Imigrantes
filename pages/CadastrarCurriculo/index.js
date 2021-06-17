@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { View, Text } from 'react-native';
+import { AuthContext } from '../../src/contexts/auth';
 
 import {Background, Header,TextoHeader ,TextoBoasVindas, BoasVindas, ImgBoasVindas, BtnCadastrarCurriculo, BtnText} from '../CadastrarCurriculo/styles'; 
 
 export default function CadastrarCurriculo() {
+
+    const { user} = useContext(AuthContext);
  return (
    <Background>
        <Header>
@@ -11,7 +14,7 @@ export default function CadastrarCurriculo() {
        </Header>
        
        <BoasVindas>
-       <TextoBoasVindas>Olá Fulano crie rapidamente seu currículo e comece a se inscrever para as vagas!</TextoBoasVindas>
+       <TextoBoasVindas>Olá {user && user.nome} crie rapidamente seu currículo e comece a se inscrever para as vagas!</TextoBoasVindas>
        </BoasVindas>
        <ImgBoasVindas source = {require('../../assets/WelcomeImg.png')}/>
        <BtnCadastrarCurriculo>

@@ -5,16 +5,17 @@ flex:1;
 background-color: #fff;
 `;
 
-export const Head = styled.View`
+export const HeaderInformacoes = styled.View`
 background-color: rgba(189, 193, 198, 0.70);
 margin-top: 28px;
+width: 100%
 `;
 
-export const Div = styled.View`
+export const InformacoesConta = styled.View`
 margin-left: 15px
 `;
 
-export const PP = styled.Image`
+export const ImgPerfil = styled.Image`
 margin: 15px;
 height: 75px;
 width: 75px;
@@ -27,27 +28,28 @@ margin-top: 50px
 `;
 
 export const Card = styled.View`
-margin-top: 20px;
-background-color: #00b94a;
-border-radius: 10px;
-padding: 0px 0px 1px 0px;
+margin: 23px;
+background-color: #009688;
+border-radius: 8px;
+margin-bottom: 80px;
 `;
 
-export const CardTitle = styled.View`
+export const CardTitle = styled.Text`
 
 width: 100%;
 background-color: rgba(189, 193, 198, 0.5);
 padding: 15px;
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
 color: black;
 text-transform: uppercase;
-font-family: Arial;
-overflow: hidden;
+font-style: italic;
+font-weight: bold;
 `;
 
-export const TextTitulo = styled.Text`
-font-size: 18;
+
+export const TextoCard = styled.Text`
+font-size: 16px;
+font-style: italic;
+color: #fff;
 
 `;
 
@@ -56,13 +58,13 @@ margin: 15px;
 font-family: Arial;
 `;
 
-export const CardFooter = styled.View`
-width: 100%;
-background-color: #fff;
-padding: 10px;
-border-bottom-left-radius: 10px;
-border-bottom-right-radius: 10px;
+
+export const TextTitulo = styled.Text`
+font-size: 18;
+
 `;
+
+
 
 
 export const SubmitButton = styled.TouchableOpacity`
@@ -101,3 +103,4 @@ margin-bottom: 15px;
 width: 70%;
 height: 100px
 `;
+
