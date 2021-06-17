@@ -1,4 +1,4 @@
-import React, {useState, createContext} from 'react';
+import React, {useState, createContext, useEffect} from 'react';
 import firebase from '../services/firebaseConnection';
 //import AsyncStorage from '@react-native-community/async-storage';
 import AsyncStorage from '@react-native-async-storage/async-storage'
@@ -8,6 +8,22 @@ export const AuthContext = createContext({});
 
 function AuthProvider({ children }){
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(()=> {
+        async function loadStorage(){
+            const storageUser = await AsyncStorage.getItem('Auth_user');
+
+            if(storageUser){
+                setUser(JSON.parse(storageUser));
+                setLoading(false);
+            }
+
+            setLoading(false);
+        }
+
+        loadStorage();
+    },[])
 
     //Função para logar o usuário
     async function signIn(email, password){
@@ -62,7 +78,7 @@ function AuthProvider({ children }){
     }
 
     return (
-        <AuthContext.Provider value={{ signed: !!user, user, signUp, signIn}}>
+        <AuthContext.Provider value={{ signed: !!user, user, signUp, signIn, loading}}>
             {children}
         </AuthContext.Provider>
     );
