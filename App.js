@@ -15,7 +15,7 @@ export default function Imigrantes() {
   return (
     <NavigationContainer>
       <AuthProvider>
-        <StatusBar backgroundColor="#131313" barStyle="light-content" />
+        <StatusBar backgroundColor="#fff" barStyle="light-content" />
         <Routes />
       </AuthProvider>
     </NavigationContainer>

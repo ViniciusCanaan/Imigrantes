@@ -1,11 +1,17 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from '../../pages/Home';
 import CadastrarCurriculo from '../../pages/CadastrarCurriculo';
 import Empresa from '../../pages/Empresa'; 
+import InformacoesCurriculo from '../../pages/InformacoesCurriculo';
+
 
 const AppDrawer = createDrawerNavigator();
+
+
+
 
 function AppRoutes(){
     return(
@@ -29,9 +35,13 @@ function AppRoutes(){
             <AppDrawer.Screen name = "Home" component={Home} />
             <AppDrawer.Screen name = "Cadastrar Curriculo" component={CadastrarCurriculo}/>
             <AppDrawer.Screen name = "Empresa" component={Empresa}/>
+            <AppDrawer.Screen name = "Formulário Curriculo" component={InformacoesCurriculo} />
+           
+            
 
         </AppDrawer.Navigator>
     );
 }
 
 export default AppRoutes;
+

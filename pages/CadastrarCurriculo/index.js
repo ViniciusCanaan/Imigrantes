@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import { Background, Header, TextoHeader, TextoBoasVindas, BoasVindas, ImgBoasVindas, BtnCadastrarCurriculo, BtnText } from '../CadastrarCurriculo/styles';
 
 export default function CadastrarCurriculo() {
-
+    
     const navigation = useNavigation();
 
     
@@ -23,8 +23,8 @@ export default function CadastrarCurriculo() {
                 <TextoBoasVindas>Olá {user && user.nome} crie rapidamente seu currículo e comece a se inscrever para as vagas!</TextoBoasVindas>
             </BoasVindas>
             <ImgBoasVindas source={require('../../assets/WelcomeImg.png')} />
-            <BtnCadastrarCurriculo>
-                <BtnText onPress={() =>navigation.navigate('Home')}>Cadastrar agora!</BtnText>
+            <BtnCadastrarCurriculo onPress={() =>navigation.navigate('InformacoesCurriculo')}>
+                <BtnText>Cadastrar agora!</BtnText>
             </BtnCadastrarCurriculo>
         </Background>
 
