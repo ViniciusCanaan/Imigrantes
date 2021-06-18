@@ -36,3 +36,17 @@ margin-bottom: 15px;
 width: 70%;
 height: 100px
 `;
+
+export const ImgEmpresas = styled.Image`
+margin-left: 45;
+align-items: center;
+justify-content: center;
+width: 80%;
+height: 300
+`;
+
+export const TextProximo = styled.Text`
+font-size: 20px;
+color: #131313;
+font-weight: bold;
+`;
