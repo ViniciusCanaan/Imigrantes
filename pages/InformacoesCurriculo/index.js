@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { View, TextInput } from 'react-native';
+import Hamburger from '../../src/components/Hamburger';
 
 
 import { Background, TextoBoasVindas, Header, TextoHeader, ViewInput, ImgCadastrar, ViewRegistrar, BtnCadastrar, TextoBtnCadastrar } from '..//InformacoesCurriculo/styles';
@@ -13,6 +14,7 @@ export default function InformacoesCurriculo() {
     return (
         <Background>
             <Header>
+                <Hamburger />
                 <TextoHeader>Formulário</TextoHeader>
             </Header>
             <TextoBoasVindas>Olá {user && user.nome} preencha as suas informações para divulgarmos para as empresas!</TextoBoasVindas>
@@ -66,10 +68,12 @@ export default function InformacoesCurriculo() {
             </ViewInput>
 
             <ViewRegistrar>
-            <ImgCadastrar source={require('../../assets/Curriculo.png')} />
-            <BtnCadastrar>
-                <TextoBtnCadastrar>Salvar</TextoBtnCadastrar>
-            </BtnCadastrar>
+                <ImgCadastrar source={require('../../assets/Curriculo.png')} />
+                <BtnCadastrar onPress={() => {
+                    alert('Formulário Salvo com Sucesso!')
+                }}>
+                    <TextoBtnCadastrar>Salvar</TextoBtnCadastrar>
+                </BtnCadastrar>
             </ViewRegistrar>
 
 

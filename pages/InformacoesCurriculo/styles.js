@@ -24,7 +24,6 @@ export const TextoHeader = styled.Text`
 color: #fff;
 font-weight: bold;
 font-size: 30px;
-margin-top: 80px;
 margin-left: 45px;
 `;
 

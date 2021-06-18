@@ -7,16 +7,16 @@ background-color: #fff;
 
 export const HeaderInformacoes = styled.View`
 background-color: rgba(189, 193, 198, 0.70);
-margin-top: 28px;
-width: 100%
+width: 100%;
 `;
 
 export const InformacoesConta = styled.View`
-margin-left: 15px
+margin-left: 15px;
+margin: auto;
 `;
 
 export const ImgPerfil = styled.Image`
-margin: 15px;
+margin: auto;
 height: 75px;
 width: 75px;
 border-radius: 250px;

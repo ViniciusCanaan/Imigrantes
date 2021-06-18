@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { View, Text, Button } from 'react-native';
+import Header from '../../src/components/Hamburger';
 
 import { AuthContext } from '../../src/contexts/auth';
 import { InformacoesConta, ImgPerfil, Card, CardTitle, CardBody, CardFooter, Container, HeaderInformacoes, SubmitButton, SubmitText, Background, TextTitulo, TextoNome, TextoEmail, ImgHome, TextoCard } from './styles';
@@ -11,8 +12,8 @@ export default function Home() {
 
   return (
     <Background>
-
       <HeaderInformacoes>
+        <Header />
         <ImgPerfil source={require('../../assets/john_doe.png')} />
         <InformacoesConta>
           <TextoNome> Nome: {user && user.nome}</TextoNome>

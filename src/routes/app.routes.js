@@ -35,7 +35,7 @@ function AppRoutes(){
             <AppDrawer.Screen name = "Home" component={Home} />
             <AppDrawer.Screen name = "Cadastrar Curriculo" component={CadastrarCurriculo}/>
             <AppDrawer.Screen name = "Empresa" component={Empresa}/>
-            <AppDrawer.Screen name = "Formulário Curriculo" component={InformacoesCurriculo} />
+            <AppDrawer.Screen name = "InformacoesCurriculo" component={InformacoesCurriculo} options={{title: 'Informações Curriculo'}} />
            
             
 

@@ -14,9 +14,7 @@ export const TextoHeader = styled.Text`
 color: #fff;
 font-weight: bold;
 font-size: 30px;
-margin-top: 80px;
 margin-left: 45px
-
 `;
 
 export const TextoBoasVindas = styled.Text`
@@ -31,7 +29,6 @@ font-size: 20px;
 
 export const BoasVindas = styled.View`
 background-color: #fff;
-
 `;
 
 export const ImgBoasVindas = styled.Image`
@@ -56,6 +53,3 @@ font-size: 18px;
 color: #fff;
 font-weight: bold;
 `;
-
-
-

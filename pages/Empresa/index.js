@@ -1,81 +1,52 @@
-/*import React from 'react';
-import PagerView from 'react-native-pager-view';
-import { StyleSheet, View, Text } from 'react-native';
-import { Container, NomeEmpresa, NewLink, NewText, LogoEmpresa } from './styles';
-
-export default function Empresa() {
-
-    const Mypager = () => {
-        return (
-            <Container>
-                <NomeEmpresa>
-                    Fiat Automoveis
-                </NomeEmpresa>
-                <LogoEmpresa source={require('../../assets/LogoFiat.png')} />
-                <NewLink>
-                    <NewText>Verificar Vagas</NewText>
-                </NewLink>
-                <NomeEmpresa>
-                    Ambev
-                </NomeEmpresa>
-                <LogoEmpresa source={require('../../assets/LogoAmbev.png')} />
-                <NewLink>
-                    <NewText>Verificar Vagas</NewText>
-                </NewLink>
-                <NomeEmpresa>
-                    Vale
-                </NomeEmpresa>
-                <LogoEmpresa source={require('../../assets/LogoVale.png')} />
-                <NewLink>
-                    <NewText>Verificar Vagas</NewText>
-                </NewLink>
-            </Container>
-        );
-    }
-}
-
-*/
-
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import PagerView from 'react-native-pager-view';
+import Hamburger from '../../src/components/Hamburger';
 
 import { Container, NomeEmpresa, NewLink, NewText, LogoEmpresa, ImgEmpresas, TextProximo } from './styles';
 
 const MyPager = () => {
     return (
-        <View style={{ flex: 1, backgroundColor: '#fff'}}>
-            <PagerView style={styles.viewPager} initialPage={0}>
+        <View style={{ flex: 1, backgroundColor: '#fff' }}>
+            <Hamburger />
+            <PagerView style={styles.viewPager} initialPage={0} >
+
                 <View style={styles.page} key="1">
-                <NomeEmpresa>
-                    Fiat Automoveis
-                </NomeEmpresa>
+                    <NomeEmpresa>
+                        Fiat Automoveis
+                    </NomeEmpresa>
                     <LogoEmpresa source={require('../../assets/LogoFiat.png')} />
-                    <NewLink>
-                    <NewText>Verificar Vagas</NewText>
+                    <NewLink onPress={() => {
+                        alert('Ops ainda não existem vagas.')
+                    }}>
+                        <NewText>Verificar Vagas</NewText>
                     </NewLink>
                     <TextProximo>Próximo ➡️</TextProximo>
-                    
+
                 </View>
                 <View style={styles.page} key="2">
-                <NomeEmpresa>
-                    Ambev
-                </NomeEmpresa>
-                    
+                    <NomeEmpresa>
+                        Ambev
+                    </NomeEmpresa>
+
                     <LogoEmpresa source={require('../../assets/LogoAmbev.png')} />
-                    <NewLink>
-                    <NewText>Verificar Vagas</NewText>
+                    <NewLink onPress={() => {
+                        alert('Ops ainda não existem vagas.')
+                    }}>
+                        <NewText>Verificar Vagas</NewText>
                     </NewLink>
                     <Text>Próximo ➡️</Text>
-                    
+
                 </View>
                 <View style={styles.page} key="3">
-                <NomeEmpresa>
-                    Vale
-                </NomeEmpresa>
+                    <NomeEmpresa>
+                        Vale
+                    </NomeEmpresa>
                     <LogoEmpresa source={require('../../assets/LogoVale.png')} />
-                    <NewLink>
-                    <NewText>Verificar Vagas</NewText>
+                    <NewLink onPress={() => {
+                        alert('Ops ainda não existem vagas.')
+                    }}>
+                        <NewText>Verificar Vagas</NewText>
                     </NewLink>
                 </View>
             </PagerView>
